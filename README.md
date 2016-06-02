@@ -16,7 +16,7 @@ Tor users become risk for our servers as they can implement unethical practice i
 #Download
 
 ```sh
-git clone https://github.com/zayedaljaberi/honeypot_fakecms
+git clone https://github.com/zayedaljaberi/block-tor-users/
 ```
 
 
