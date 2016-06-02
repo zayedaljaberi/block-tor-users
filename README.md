@@ -2,7 +2,7 @@
 Tor users become risk for our servers as they can implement unethical practice into your website, server wihtout tracing as they are using tor routing.This method will allow you to block major list of tor users to access your website basically, our method will target the exit node and block it.
 
 
-  - Version: 2.0 / Contribute with 
+  - Version: 2.0 / Contribute with <a href="https://github.com/Mohamedzu"> Mohammed Alzubaidi</a>
   - Update: Automated way to that getting up-to-date every 30 min
   - Demo: http://wesecure.ae/toruser
   - Official Site: http://wesecure.ae/weserv
@@ -49,4 +49,4 @@ License
 WESECURE AE
 
 
-**Enjoy and let them trap!**
+**Enhance Your Security!**
