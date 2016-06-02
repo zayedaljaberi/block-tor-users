@@ -134,9 +134,9 @@ deny from all
 Header set X-XSS-protection "1 mode=block"
 
 
-<Files 403.shtml>
+<Files 403.html>
 order allow,deny
 allow from all
 </Files>
 
-ErrorDocument 403 /403.shtml
+ErrorDocument 403 /403.html
