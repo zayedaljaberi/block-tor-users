@@ -1,9 +1,9 @@
 <?php
 $torIPListURL = "https://www.dan.me.uk/torlist/";
-$htaccessFilePath = "../.htaccess";
+$htaccessFilePath = ".htaccess";
 $htaccessFileContent = "";
 $lastUpdateTime = 0;
-$ipListStartLine = "#--block tor users v1.0.0--#";
+$ipListStartLine = "#--block tor users v2.0--#";
 $loop = true;
 if (!file_exists($htaccessFilePath)) {
     die(".htaccess file was not found, please create it!");
@@ -39,16 +39,13 @@ function resetTime($filePath, $ipListStartLine) {
     while(!feof($file)) {
         $line = fgets($file);
         $fileContent .= $line;
-//        echo "<br>" . trim($line) . " == " . $ipListStartLine . " " . var_dump(trim($line) == $ipListStartLine) . "o";
         if (trim($line) == $ipListStartLine) {
             if (!feof($file)) {
                 fgets($file);
             }
-//            echo "<br>inif";
             $fileContent .= "#" . time();
         }
     }
-//    echo "<br>" . $fileContent . "<br>";
     fclose($file);
     fileWrite($filePath, $fileContent);
     die("Unable to get the tor IP list!, Maybe you have accessed the list less than 30 minutes from the same IP Address. Please try again after 30 minutes to avoid being blocked");
