@@ -24,7 +24,10 @@ if (time() - $lastUpdateTime > (30 * 60)) {
     $file = fopen($torIPListURL, "r") or resetTime($htaccessFilePath, $ipListStartLine);
     $htaccessFileContent .= "#" . time() . "\n\n";
     while(!feof($file)) {
-        $htaccessFileContent .= "Deny from ".fgets($file);
+        $ip = fgets($file);
+        if ($ip != "") {
+            $htaccessFileContent .= "Deny from ".$ip;
+        }
     }
     fclose($file);
     fileWrite($htaccessFilePath, $htaccessFileContent);
